@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!-- Enlace a la CDN de Bootstrap para aplicar estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a la fuente Poppins de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Establecer un fondo azul claro para toda la página */
+        body {
+            background-color: #e3f2fd; /* Azul claro */
+            font-family: 'Poppins', sans-serif; /* Fuente más elegante */
+        }
+
+        /* Estilos adicionales para centrar el formulario */
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos para el título (más grande, más grueso, y color azul oscuro) */
+        .card-title {
+            color: #0d47a1; /* Azul oscuro */
+            font-size: 2.5rem; /* Aumentar el tamaño del título */
+            font-weight: 700; /* Hacer la fuente más gruesa */
+            letter-spacing: 1px; /* Agregar un pequeño espacio entre letras */
+        }
+
+        /* Estilos personalizados para el botón de registro */
+        .btn-register {
+            border: 2px solid #0d47a1; /* Borde azul oscuro */
+            background: linear-gradient(135deg, #64b5f6, #1e88e5); /* Degradado azul */
+            color: white;
+        }
+
+        .btn-register:hover {
+            background: linear-gradient(135deg, #1e88e5, #64b5f6); /* Degradado invertido para el hover */
+            border-color: #0d47a1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="width: 100%; max-width: 400px;">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Formulario de Registro</h3>
+                <form action="crearbasedatos.php" method="post">
+
+                    <!-- Campo Nombre -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Escribe tu nombre" required>
+                    </div>
+
+                    <!-- Campo Apellido -->
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" placeholder="Escribe tu apellido" required>
+                    </div>
+
+                    <!-- Campo Teléfono -->
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" name="telefono" placeholder="Escribe tu teléfono" required>
+                    </div>
+
+                    <!-- Botón de Registro -->
+                    <button type="submit" class="btn btn-register w-100">Registrar</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
